@@ -5,13 +5,13 @@
       apt:
         name: software-properties-common
 
-    - name: Add Certbot repository
-      apt_repository:
-        repo: "ppa:certbot/certbot"
-
     - name: Update system
       apt:
         update_cache: yes
+
+    - name: Add Certbot
+      apt:
+        name: "certbot"
 
     - name: Install python-certbot-nginx
       apt:

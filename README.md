@@ -68,6 +68,11 @@ Update your local `hosts` file with the remote server's ip address
 remote-server-ip-address (maintain other default options)
 ```
 
+If the SSH key you intend to use isn't `~/.ssh/id_rsa.pub`, change the location in `group_vars/all`    
+```
+ssh_public_key_path: "~/.ssh/id_rsa.pub"
+```
+
 Run the ansible playbook
 
 ```
